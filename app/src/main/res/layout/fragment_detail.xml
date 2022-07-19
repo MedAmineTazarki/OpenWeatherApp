@@ -25,6 +25,17 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="12°" />
 
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/weather_main_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/temperature"
+            android:src="@drawable/ic_search"
+            tools:text="light rain" />
+
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/weather_main"
             android:layout_width="wrap_content"
@@ -32,7 +43,7 @@
             android:textSize="@dimen/text_size_medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/temperature"
+            app:layout_constraintTop_toBottomOf="@id/weather_main_img"
             tools:text="light rain" />
 
         <androidx.constraintlayout.widget.ConstraintLayout

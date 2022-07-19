@@ -1,10 +1,13 @@
 package com.tazarki.openweather.ui.fragment
 
+import android.net.Uri
 import android.os.Bundle
 import android.view.*
+import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import com.bumptech.glide.Glide
 import com.tazarki.openweather.R
 import com.tazarki.openweather.data.local.Location
 import com.tazarki.openweather.databinding.FragmentDetailBinding
@@ -53,6 +56,8 @@ class WeatherDetailFragment : Fragment() {
 
         binding.temperature.text = String.format("%s%s", main.temp.roundToInt(), CELSIUS)
         binding.weatherMain.text = weather.description.replaceFirstChar { it.uppercase() }
+
+        binding.weatherMainImg.setIconWithGlide(weather.icon)
 
         binding.humidity.text = String.format(
             STRING_FORMAT, HUMIDITY,
@@ -151,5 +156,12 @@ class WeatherDetailFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun ImageView.setIconWithGlide(nameIcon: String){
+        val uri: Uri = Uri.parse(context.resources.getString(R.string.path_icon, nameIcon))
+        Glide.with(context)
+            .load(uri)
+            .into(this)
     }
 }

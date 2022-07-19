@@ -3,7 +3,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_subtitle">amine.tazarki@psa.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_bookmark">Bookmark</string>
 
@@ -17,4 +17,6 @@
     <string name="no_internet">You are offline..!</string>
     <string name="added_bookmark_msg">Location added Bookmark</string>
     <string name="removed_bookmark_msg">Location removed from BookMark</string>
+
+    <string name="path_icon">https://openweathermap.org/img/wn/%1$s@2x.png</string>
 </resources>
